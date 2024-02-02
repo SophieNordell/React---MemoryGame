@@ -88,6 +88,16 @@ function App() {
     <>
       <div className="App">
         <h1 className="bluey-title">Bluey - Memory</h1>
+        {gameStarted ? null : (
+          <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+            <img
+              src="blueyFamily.jpg"
+              alt="BlueyFamily"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
+        )}
+
         <button onClick={shuffleCards}>
           {isGameWon ? "Play Again" : "New Game"}
         </button>
